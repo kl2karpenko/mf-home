@@ -1,7 +1,12 @@
 {
-  "name": "mf-home",
+  "name": "@kl2karpenko/mf-home",
   "version": "0.1.0",
   "private": true,
+  "author": "kl2.karpeko@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kl2karpenko/mf-home.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -34,5 +39,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "bugs": {
+    "url": "https://github.com/kl2karpenko/mf-home/issues"
+  },
+  "homepage": "https://github.com/kl2karpenko/mf-home#readme",
+  "main": "src/Home.js",
+  "devDependencies": {},
+  "license": "ISC"
 }
