@@ -11,6 +11,8 @@
 
 # production
 /build
+/cjs
+/esm
 
 # misc
 .DS_Store
