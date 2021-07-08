@@ -4,4 +4,5 @@ This is the MF repo, for MFe architecture.
 This is an example of Application build with microfrontend architecture.
 
 The parent MFe project iss here:
-* @klkarpenko/mf-main
+* [@klkarpenko/mf-main](https://github.com/kl2karpenko/mf-main/tree/master)
+
