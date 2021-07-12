@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Home from '../src/Home';
 
-ReactDOM.render(
+export default ReactDOM.render(
   <React.StrictMode>
     <Home />
   </React.StrictMode>,

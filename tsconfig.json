@@ -27,7 +27,6 @@
       "*": ["types/*"]
     }
   },
-  "include": ["src/**/*", "src/locales/messages.*.json", "public/index.tsx"],
-  "exclude": ["test/**/*", "src/setupTests.ts",
-    "src/testUtils/**/*", "**/*.test.ts", "**/*.test.tsx"]
+  "include": ["src/**/*", "public/index.tsx"],
+  "exclude": ["test/**/*", "src/setupTests.ts", "src/testUtils/**/*", "**/*.test.ts", "**/*.test.tsx"]
 }
