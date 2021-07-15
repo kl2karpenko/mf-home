@@ -44,6 +44,9 @@
     "@types/react-router-dom": "5.1.7",
     "@types/testing-library__jest-dom": "5.14.0",
     "@types/testing-library__react": "10.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-imports": "2.0.0",
     "compression-webpack-plugin": "^8.0.1",
@@ -51,14 +54,20 @@
     "cross-env": "7.0.3",
     "eslint": "7.23.0",
     "eslint-config-prettier": "8.1.0",
+    "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-flowtype": "^5.8.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-testing-library": "^4.9.0",
     "fork-ts-checker-webpack-plugin": "^6.2.12",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.6.3",
-    "jest-environment-jsdom-fourteen": "0.1.0",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
     "jest-junit": "12.0.0",
     "jest-sonar-reporter": "2.0.0",
     "jest-svg-transformer": "1.0.0",
@@ -74,7 +83,8 @@
   "scripts": {
     "start": "mf-scripts start",
     "build": "tsc --outDir cjs && tsc --outDir esm --module ES6",
-    "test": "jest"
+    "test": "jest --env=jest-environment-jsdom-fourteen",
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "eslintConfig": {
     "extends": [

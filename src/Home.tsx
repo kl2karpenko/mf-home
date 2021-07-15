@@ -27,7 +27,7 @@ function Home() {
     <Box p={4}>
       <Grid container direction="column" spacing={3}>
         <Grid item xs={12}>
-          <Typography variant="h4" component="h4">
+          <Typography variant="h4" component="h4" data-test="home-app-text">
             Hello, I am a Micro-Frontend app!
           </Typography>
         </Grid>
