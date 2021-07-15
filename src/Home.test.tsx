@@ -8,10 +8,4 @@ describe('Home:', () => {
     const homeText = screen.getByTestId('home-app-text');
     expect(homeText).toBeInTheDocument();
   });
-
-  test('renders the title message', () => {
-    render(<Home />);
-    const homeText = screen.getByTestId('home-app-text');
-    expect(homeText).toBeInTheDocument();
-  });
 })
