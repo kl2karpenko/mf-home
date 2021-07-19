@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, {useState, ChangeEvent, useMemo} from 'react';
 import { Api } from './api';
 import { Box, Grid, Typography, InputLabel, TextField, Button, CircularProgress } from '@material-ui/core';
 
@@ -8,13 +8,12 @@ function Home() {
   const [age, setAge] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
   const showError = !name && changed;
-
-  const api = new Api();
+  const api = useMemo(() => new Api(), []);
 
   const predictAgeByName = async (name: string) => {
     try {
       setLoading(true);
-      const { data, status } = await api.predictAge(name);
+      const { data } = await api.predictAge(name);
       setAge(data.age);
     } catch (e) {
       console.error(e);
