@@ -23,7 +23,7 @@ function Home() {
   };
 
   return (
-    <Box p={4}>
+    <Box p={4} data-test="home-app">
       <Grid container direction="column" spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h4" component="h4" data-test="home-app-text">
