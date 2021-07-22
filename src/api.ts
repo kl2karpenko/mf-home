@@ -5,7 +5,7 @@ interface AxiosResponse {
   status: number;
 }
 
-export class Api {
+export default class Api {
   constructor() {
     // no-op
   }

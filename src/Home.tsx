@@ -1,5 +1,5 @@
 import React, {useState, ChangeEvent, useMemo} from 'react';
-import { Api } from './api';
+import Api from './api';
 import { Box, Grid, Typography, InputLabel, TextField, Button, CircularProgress } from '@material-ui/core';
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
     }
   };
 
-   return (
+  return (
     <Box p={4}>
       <Grid container direction="column" spacing={3}>
         <Grid item xs={12}>
@@ -33,12 +33,13 @@ function Home() {
         <Grid item xs={12}>
           <Grid container alignItems="center" alignContent="center" spacing={1} justifyContent="center">
             <Grid item xs={8}>
-              <Box mb={1}>
+              <Box mb={1} data-test="home-app-label">
                 <InputLabel>Type your name, and we will predict our age!</InputLabel>
               </Box>
               <TextField
                 fullWidth
                 id="name"
+                data-test="home-get-age-input"
                 label={showError ? "Field cannot be empty" : "Name"}
                 variant="outlined"
                 value={name}
@@ -52,11 +53,13 @@ function Home() {
             <Grid item xs={4}>
               <Box mt={2.5}>
                 <Button
+                  data-test="home-get-age"
                   variant="contained"
                   size="large"
                   color="secondary"
                   disabled={!changed || showError}
                   onClick={async () => {
+                    console.log('click');
                     await predictAgeByName(name);
                   }}
                 >
@@ -66,10 +69,10 @@ function Home() {
             </Grid>
           </Grid>
         </Grid>
-        {loading && <Box m={1}><CircularProgress /></Box>}
-        {age ? (<Grid item xs={12}>
+        {loading && <Box m={1} data-test="home-loading"><CircularProgress /></Box>}
+        {age ? (<Grid item xs={12} data-test="home-age">
           <Typography variant="body1" component="div">
-            Your predicted age is: {age}
+            Your predicted age is: <span data-test="home-age-value">{age}</span>
           </Typography>
         </Grid>) : ''}
       </Grid>
